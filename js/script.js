@@ -16,23 +16,25 @@ startButton.addEventListener("click",
 
         for (let i = 1; i <= 100; i++) {
         
+            // Griglia
             const newElement = document.createElement("div");
-        
             newElement.innerText = i;
             newElement.classList.add ("square");
-        
+            newElement.classList.add ("ratio", "ratio-1x1");
             
             gridElement.append(newElement);
             
+
             // Colore
-            newElement.addEventListener ("click", function () {
+            newElement.addEventListener ("click", 
+                function () {
                 
-                this.classList.toggle ("active");
+                    this.classList.toggle ("active");
                 
-                
-                console.log (newElement);
-            })
+                    console.log (i);
+                }
+            )
         } 
     }
-    )
+)
     
